@@ -10,9 +10,11 @@ run = True
 states = {}
 
 def showStates():
-   for i in states.keys():
-       return i,states[i]
-   return 'NO STATES EXIST'     
+    if len(states.keys()) > 0:
+        for i in states.keys():
+            print(i,states[i])
+        return ""
+    return 'NO STATES EXIST'     
 
 while(run):
     raw = input("?")
@@ -21,4 +23,4 @@ while(run):
     elif raw == "states":
         print(showStates())
     else:
-        print(parser.parse(raw))
+        print(parser.parse(raw,states))

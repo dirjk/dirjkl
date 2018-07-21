@@ -1,6 +1,6 @@
 {
     "python.unitTest.pyTestEnabled": false,
-    "python.unitTest.unittestEnabled": true,
+    "python.unitTest.unittestEnabled": false,
     "python.unitTest.nosetestsEnabled": false,
     "python.pythonPath": "C:\\Users\\josep\\AppData\\Local\\Programs\\Python\\Python36-32\\python.exe",
     "python.unitTest.unittestArgs": [
@@ -9,5 +9,6 @@
         "./test",
         "-p",
         "*test*.py"
-    ]
+    ],
+    "python.unitTest.promptToConfigure": false
 }
