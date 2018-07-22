@@ -22,11 +22,12 @@ class TestInitStateExpressions(unittest.TestCase):
         #must allow negative integers
         self.assertTrue(re.fullmatch(expr.valid_number,"-123"))
         #must allow floats and negative floats
-        self.assertTrue(re.fullmatch(expr.valid_number,"12."))
         self.assertTrue(re.fullmatch(expr.valid_number,"12.345"))
         self.assertTrue(re.fullmatch(expr.valid_number,".345"))
         self.assertTrue(re.fullmatch(expr.valid_number,"-.345"))
         self.assertTrue(re.fullmatch(expr.valid_number,"-877.345"))
+        self.assertTrue(re.fullmatch(expr.valid_number,"12."))
+        self.assertTrue(re.fullmatch(expr.valid_number,"-12."))
         #must not contain letters or special characters
         self.assertFalse(re.fullmatch(expr.valid_number,"asd"))
         self.assertFalse(re.fullmatch(expr.valid_number,"(*&())"))
