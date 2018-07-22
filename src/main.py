@@ -11,6 +11,7 @@ states = {}
 
 def showStates():
     if len(states.keys()) > 0:
+        print("")
         for i in states.keys():
             print(i,states[i])
         return ""
