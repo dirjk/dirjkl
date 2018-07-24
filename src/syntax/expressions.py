@@ -25,6 +25,11 @@ state_change_push = r'->\((' \
     + state_change_push_element_front + r'|' \
     + state_change_push_element_at_position \
     + r')\)'
+state_change_just_push = r'\((' \
+    + state_change_push_element_back + r'|' \
+    + state_change_push_element_front + r'|' \
+    + state_change_push_element_at_position \
+    + r')\)'
 
 full_push_element = re.compile(begin_state_change + state_change_push)
 
